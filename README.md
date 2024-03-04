@@ -8,6 +8,10 @@ My very own LazyVim configuration 🚀
 Steps to install:
 
 - get [brew](https://brew.sh)
-- install git `brew install git`
-- get warp `brew install warp`
-- clone this repo `git clone ~/.config/nvim`
+
+```bash
+brew install git neovim lazygit warp
+git clone <this-repo> ~/.config/nvim
+```
+
+✅ Open warp and use nvim!
