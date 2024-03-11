@@ -2,8 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-  -- add more treesitter parsers
-      -- add tsx and treesitter
+      -- add more treesitter parsers
       vim.list_extend(opts.ensure_installed, {
         "bash",
         "html",
@@ -18,6 +17,8 @@ return {
         "vim",
         "yaml",
       })
+      -- when we see a file try to get highlighting
+      opts.auto_install = true
     end,
   },
 }
