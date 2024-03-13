@@ -42,6 +42,12 @@ return {
             end,
             "remove from harpoon list",
           },
+          f = {
+            function()
+              toggle_telescope(harpoon:list())
+            end,
+            "find harpooned files",
+          },
           k = {
             function()
               harpoon:list():clear()
@@ -60,14 +66,31 @@ return {
             end,
             "previous harpooned file",
           },
-          v = {
+          s = {
             function()
-              toggle_telescope(harpoon:list())
+              --toggle_telescope(harpoon:list())
+              harpoon.ui:toggle_quick_menu(harpoon:list())
             end,
-            "view harpooned files",
+            "select harpooned file",
           },
         },
       }, { prefix = "<leader>" })
+
+      harpoon:extend({
+        UI_CREATE = function(cx)
+          vim.keymap.set("n", "<C-v>", function()
+            harpoon.ui:select_menu_item({ vsplit = true })
+          end, { buffer = cx.bufnr })
+
+          vim.keymap.set("n", "<C-x>", function()
+            harpoon.ui:select_menu_item({ split = true })
+          end, { buffer = cx.bufnr })
+
+          vim.keymap.set("n", "<C-t>", function()
+            harpoon.ui:select_menu_item({ tabedit = true })
+          end, { buffer = cx.bufnr })
+        end,
+      })
 
       vim.keymap.set("n", "<C-e>", function()
         toggle_telescope(harpoon:list())
