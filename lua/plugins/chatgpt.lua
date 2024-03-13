@@ -4,7 +4,7 @@ return {
     event = "VeryLazy",
     config = function()
       require("chatgpt").setup({
-        api_key_cmd = "/opt/homebrew/Caskroom/1password-cli/2.25.0/op read op://private/OpenAI/credential --no-newline",
+        -- api_key_cmd = "/opt/homebrew/Caskroom/1password-cli/2.25.0/op read op://private/OpenAI/credential --no-newline",
       })
       local wk = require("which-key")
       wk.register({
