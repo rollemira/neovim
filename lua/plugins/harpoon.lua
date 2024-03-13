@@ -54,12 +54,18 @@ return {
             end,
             "previous harpooned file",
           },
+          v = {
+            function()
+              toggle_telescope(harpoon:list())
+            end,
+            "view harpooned files",
+          },
         },
       }, { prefix = "<leader>" })
 
       vim.keymap.set("n", "<C-e>", function()
         toggle_telescope(harpoon:list())
-      end, { desc = "Open harpooned files in telescope" })
+      end, { desc = "view harpooned files" })
     end,
   },
 }
