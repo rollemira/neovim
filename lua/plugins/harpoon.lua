@@ -29,49 +29,49 @@ return {
       local wk = require("which-key")
       wk.register({
         a = {
-          name = "Harpoon",
+          name = "harpoon",
           a = {
             function()
               harpoon:list():append()
             end,
-            "append to harpoon list",
+            "Append to harpoon list",
           },
           d = {
             function()
               harpoon:list():remove()
             end,
-            "remove from harpoon list",
+            "Remove from harpoon list",
           },
           f = {
             function()
               toggle_telescope(harpoon:list())
             end,
-            "find harpooned files",
+            "Find harpooned files",
           },
           k = {
             function()
               harpoon:list():clear()
             end,
-            "clear harpoon list",
+            "Clear harpoon list",
           },
           n = {
             function()
               harpoon:list():next()
             end,
-            "next harpooned file",
+            "Next harpooned file",
           },
           p = {
             function()
               harpoon:list():prev()
             end,
-            "previous harpooned file",
+            "Previous harpooned file",
           },
           s = {
             function()
               --toggle_telescope(harpoon:list())
               harpoon.ui:toggle_quick_menu(harpoon:list())
             end,
-            "select harpooned file",
+            "Select harpooned file",
           },
         },
       }, { prefix = "<leader>" })
@@ -94,7 +94,7 @@ return {
 
       vim.keymap.set("n", "<C-e>", function()
         toggle_telescope(harpoon:list())
-      end, { desc = "view harpooned files" })
+      end, { desc = "Ciew harpooned files" })
     end,
   },
 }

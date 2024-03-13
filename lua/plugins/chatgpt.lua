@@ -10,7 +10,7 @@ return {
       wk.register({
         o = {
           name = "ChatGPT",
-          c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
+          c = { "<cmd>ChatGPT<CR>", "chatgpt" },
           e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
           g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
           t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
