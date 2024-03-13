@@ -42,6 +42,12 @@ return {
             end,
             "remove from harpoon list",
           },
+          k = {
+            function()
+              harpoon:list():clear()
+            end,
+            "clear harpoon list",
+          },
           n = {
             function()
               harpoon:list():next()
