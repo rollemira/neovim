@@ -94,7 +94,7 @@ return {
 
       vim.keymap.set("n", "<C-e>", function()
         toggle_telescope(harpoon:list())
-      end, { desc = "Ciew harpooned files" })
+      end, { desc = "View harpooned files" })
     end,
   },
 }
