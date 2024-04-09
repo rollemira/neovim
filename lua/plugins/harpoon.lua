@@ -32,7 +32,7 @@ return {
           name = "harpoon",
           a = {
             function()
-              harpoon:list():append()
+              harpoon:list():add()
             end,
             "Append to harpoon list",
           },
