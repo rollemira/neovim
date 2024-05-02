@@ -10,8 +10,17 @@ Steps to install:
 - get [brew](https://brew.sh)
 
 ```bash
+# install dependencies with brew
 brew install git neovim lazygit warp
-git clone <this-repo> ~/.config/nvim
+# backup your old nvim config
+mv ~/.config/nvim ~/.config/nvim_old
+# clone this repo to new config
+git clone https://github.com/rollemira/neovim.git ~/.config/nvim
 ```
 
 ✅ Open warp and use nvim!
+
+```bash
+# inside warp terminal
+nvim
+```
